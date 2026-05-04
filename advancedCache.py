@@ -84,7 +84,7 @@ if __name__ == "__main__":
     }
 
     cache.evict_expired(200)
-    print("after eviction:", cache.cache)  # {'c': (30.0, 300)}
+    print("after eviction:", cache.cache)  
 
     
     cache.cache = {
@@ -95,5 +95,5 @@ if __name__ == "__main__":
 
     now = 100
 
-    print("q=0.5:", cache.weighted_quantile(0.5, now))  # ~10
-    print("q=0.8:", cache.weighted_quantile(0.8, now))  # ~20
+    print("q=0.5:", cache.weighted_quantile(0.5, now)) 
+    print("q=0.8:", cache.weighted_quantile(0.8, now))  
